@@ -13,7 +13,7 @@ public class BaseTest {
 
    @BeforeEach
 void setup() {
-    WebDriverManager.chromedriver().setup();
+
 
     ChromeOptions options = new ChromeOptions();
 
@@ -23,6 +23,7 @@ void setup() {
     options.addArguments("--disable-gpu");
     options.addArguments("--window-size=1920,1080");
 
+     options.setBinary("/usr/bin/google-chrome");
     driver = new ChromeDriver(options);
 }
 
